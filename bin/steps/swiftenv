@@ -13,7 +13,7 @@ fi
 
 # Install Mongo driver
 puts-step "Installing libmongoc"
-apt-get install libmongoc-1.0-0
+apt-get install libmongoc
 
 # Install Swift
 puts-step Installing Swift $SWIFT_VERSION
