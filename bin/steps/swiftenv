@@ -13,7 +13,7 @@ fi
 
 # Install Mongo driver
 puts-step "Installing libmongoc"
-sudo apt-get install pkg-config libssl-dev libsasl2-dev
+apt-get install pkg-config libssl-dev libsasl2-dev
 wget https://github.com/mongodb/mongo-c-driver/releases/download/1.9.2/mongo-c-driver-1.9.2.tar.gz
 tar xzf mongo-c-driver-1.9.2.tar.gz
 cd mongo-c-driver-1.9.2
