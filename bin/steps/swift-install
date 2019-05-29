@@ -1,8 +1,5 @@
 DYNAMIC_LIBRARY_REGEX=".*\.so\(\.[0-9]+\)*\'"
 
-puts-step "Installing libmongoc"
-apt-get install libmongoc-1.0-0
-
 puts-step "Installing dynamic libraries"
 mkdir -p $BUILD_DIR/.swift-lib
 SWIFT_PREFIX="$(swiftenv prefix)"
