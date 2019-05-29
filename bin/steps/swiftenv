@@ -11,6 +11,10 @@ else
     export SWIFT_VERSION="$DEFAULT_SWIFT_VERSION"
 fi
 
+# Install Mongo driver
+puts-step "Installing libmongoc"
+apt-get install libmongoc-1.0-0
+
 # Install Swift
 puts-step Installing Swift $SWIFT_VERSION
 swiftenv install $SWIFT_VERSION -s
