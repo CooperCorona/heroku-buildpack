@@ -11,17 +11,6 @@ else
     export SWIFT_VERSION="$DEFAULT_SWIFT_VERSION"
 fi
 
-# Install Mongo driver
-puts-step "Installing libmongoc"
-apt-get install pkg-config libssl-dev libsasl2-dev
-wget https://github.com/mongodb/mongo-c-driver/releases/download/1.9.2/mongo-c-driver-1.9.2.tar.gz
-tar xzf mongo-c-driver-1.9.2.tar.gz
-cd mongo-c-driver-1.9.2
-./configure --disable-automatic-init-and-cleanup
-make
-sudo make install
-cd ..
-
 # Install Swift
 puts-step Installing Swift $SWIFT_VERSION
 swiftenv install $SWIFT_VERSION -s
