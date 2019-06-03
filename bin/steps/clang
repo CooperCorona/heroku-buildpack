@@ -1,4 +1,7 @@
 if [[ ! -d "$CACHE_DIR/$STACK/clang-$CLANG_VERSION" ]]; then
+  echo "CLANG_VERSION: $CLANG_VERSION"
+  echo "DISTRIB_RELEASE: $DISTRIB_RELEASE"
+  echo "STACK: $STACK"
   puts-step "Installing clang $CLANG_VERSION"
   mkdir -p "$CACHE_DIR/$STACK/clang-$CLANG_VERSION"
   curl http://releases.llvm.org/$CLANG_VERSION/clang+llvm-$CLANG_VERSION-x86_64-linux-gnu-ubuntu-$DISTRIB_RELEASE.tar.xz -s -L | xz -d -c | tar x -C $CACHE_DIR/$STACK/clang-$CLANG_VERSION --strip 1 &> /dev/null
