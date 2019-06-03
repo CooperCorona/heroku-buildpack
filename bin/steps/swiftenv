@@ -1,5 +1,5 @@
 puts-step Testing libmongoc
-dpkg -L libmongoc-1.0-0
+dpkg -L libmongoc
 
 puts-step Installing mongo-c-driver
 wget https://github.com/mongodb/mongo-c-driver/releases/download/1.14.0/mongo-c-driver-1.14.0.tar.gz
