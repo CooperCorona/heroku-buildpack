@@ -1,14 +1,3 @@
-puts-step Testing libmongoc
-dpkg -L libmongoc
-
-puts-step Installing mongo-c-driver
-wget https://github.com/mongodb/mongo-c-driver/releases/download/1.14.0/mongo-c-driver-1.14.0.tar.gz
-tar xzf mongo-c-driver-1.14.0.tar.gz
-cd mongo-c-driver-1.14.0
-mkdir cmake-build
-cd cmake-build
-cmake -DENABLE_AUTOMATIC_INIT_AND_CLEANUP=OFF ..
-
 # Activate swiftenv
 puts-step Installing swiftenv
 
